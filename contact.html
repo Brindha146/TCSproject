@@ -8,6 +8,72 @@
     <!-- google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <style>
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    </style>
 </head>
 
 <body>
@@ -95,7 +161,7 @@
             <div class="row contact-block">
                 <div class="col-lg-7 contact-right mt-5">
                     <h3 class="title-style mb-4 pb-2">Contact Us</h3>
-                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                    <form action="https://brindha.gmail.com/submitForm" method="post" class="signin-form">
                         <div class="input-grids">
                             <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*"
                                 class="contact-input" required="" />
@@ -105,7 +171,7 @@
                                 class="contact-input" required="" />
                         </div>
                         <div class="form-input">
-                            <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here*"
+                            <textarea name="Message" id="Message" placeholder="Type your message here*"
                                 required=""></textarea>
                         </div>
                         <button class="btn btn-style mt-sm-3">Send Message</button>
@@ -159,7 +225,7 @@
                 <div class="col-lg-5 mt-lg-0 mt-5 pl-xl-5 pl-lg-4">
                     <div class="map-iframe">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.553700070407!2d79.82671567492585!3d11.936116388292135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5363d4f830862d%3A0x1a65d34ce66515c4!2sJawaharlal%20Nehru%20St%2C%20MG%20Road%20Area%2C%20Puducherry%2C%20605001!5e0!3m2!1sen!2sin!4v1686264054711!5m2!1sen!2sin" referrerpolicy="no-referrer-when-downgrade"
                             width="100%" height="400" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                 </div>
@@ -248,6 +314,15 @@
         </div>
     </section>
     <!-- //copyright -->
+    <!-- Chatbot -->
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    
+  </form>
+</div>
+<!--//Chatbot-->
 
     <!-- Js scripts -->
     <!-- move top -->
@@ -356,7 +431,19 @@
     <!--bootstrap-->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
-    <!-- //Js scripts -->
+
+    <!-- Chatbot JS -->
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+        <!--//Chatbot JS-->
+        <!-- //Js scripts -->
 </body>
 
 </html>
