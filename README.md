@@ -2,6 +2,9 @@
 This is the project to be evaluated for my FRT internship
 
 
+DEMO LINKS
+
+
 #Azure Deployment link = https://nice-pond-09b821110.3.azurestaticapps.net
 
 
